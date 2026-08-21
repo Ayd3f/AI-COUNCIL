@@ -1,0 +1,23 @@
+# --- Web framework -----------------------------------------------------------
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.34,<1.0
+pydantic>=2.9,<3.0
+pydantic-settings>=2.6,<3.0
+
+# --- Database ----------------------------------------------------------------
+SQLAlchemy[asyncio]>=2.0.36,<3.0
+aiosqlite>=0.20
+# For PostgreSQL: set DATABASE_URL=postgresql+asyncpg://... and uncomment:
+# asyncpg>=0.30
+
+# --- Official provider SDKs --------------------------------------------------
+openai>=1.59            # OpenAI + (OpenAI-compatible) xAI Grok + DeepSeek
+anthropic>=0.42         # Anthropic Claude
+google-genai>=0.8       # Google Gemini
+
+# --- HTTP --------------------------------------------------------------------
+httpx>=0.27
+
+# --- Tests -------------------------------------------------------------------
+pytest>=8.3
+pytest-asyncio>=0.25

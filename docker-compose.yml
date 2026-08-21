@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    # API keys and all tuning come from .env (copy .env.example first).
+    env_file:
+      - .env
+    environment:
+      # Nginx serves the UI on :8080 and proxies /api, so that origin must be allowed.
+      CORS_ORIGINS: http://localhost:8080,http://127.0.0.1:8080
+      DATABASE_URL: sqlite+aiosqlite:////app/data/ai_council.db
+    volumes:
+      - council-data:/app/data
+    ports:
+      # Exposed so you can hit /docs directly; the UI goes through nginx.
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+volumes:
+  council-data:

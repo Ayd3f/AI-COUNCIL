@@ -1,0 +1,58 @@
+{
+  "_README": [
+    "Token prices used ONLY for the cost estimate shown in the UI.",
+    "Values are USD per 1,000,000 tokens.",
+    "Any model that is absent here (or whose values are null) is reported as",
+    "'pricing not configured' — it is NEVER silently costed at $0.",
+    "Look the current numbers up on the provider's own pricing page and edit",
+    "this file; nothing needs to be rebuilt or restarted except the backend.",
+    "  OpenAI    https://openai.com/api/pricing/",
+    "  Anthropic https://www.anthropic.com/pricing#api",
+    "  Google    https://ai.google.dev/pricing",
+    "  xAI       https://docs.x.ai/docs/models",
+    "  DeepSeek  https://api-docs.deepseek.com/quick_start/pricing",
+    "Keys are matched exactly first, then by longest prefix, so an entry for",
+    "'gpt-4o' also covers 'gpt-4o-2024-11-20'."
+  ],
+  "currency": "USD",
+  "models": {
+    "claude-opus-5": { "input_per_1m": 5.0, "output_per_1m": 25.0 },
+    "claude-opus-4-8": { "input_per_1m": 5.0, "output_per_1m": 25.0 },
+    "claude-opus-4-7": { "input_per_1m": 5.0, "output_per_1m": 25.0 },
+    "claude-opus-4-6": { "input_per_1m": 5.0, "output_per_1m": 25.0 },
+    "claude-sonnet-5": { "input_per_1m": 3.0, "output_per_1m": 15.0 },
+    "claude-sonnet-4-6": { "input_per_1m": 3.0, "output_per_1m": 15.0 },
+    "claude-haiku-4-5": { "input_per_1m": 1.0, "output_per_1m": 5.0 },
+    "claude-fable-5": { "input_per_1m": 10.0, "output_per_1m": 50.0 },
+
+    "gpt-4o": { "input_per_1m": null, "output_per_1m": null },
+    "gpt-4o-mini": { "input_per_1m": null, "output_per_1m": null },
+    "gpt-4.1": { "input_per_1m": null, "output_per_1m": null },
+    "o3": { "input_per_1m": null, "output_per_1m": null },
+
+    "gemini-3.5-flash": { "input_per_1m": null, "output_per_1m": null },
+    "gemini-3.7-flash": { "input_per_1m": null, "output_per_1m": null },
+    "gemini-flash-latest": { "input_per_1m": null, "output_per_1m": null },
+    "gemini-3.1-pro-preview": { "input_per_1m": null, "output_per_1m": null },
+    "gemini-2.5-flash": { "input_per_1m": null, "output_per_1m": null },
+    "gemini-2.5-pro": { "input_per_1m": null, "output_per_1m": null },
+
+    "grok-3": { "input_per_1m": null, "output_per_1m": null },
+    "grok-4": { "input_per_1m": null, "output_per_1m": null },
+
+    "deepseek-v4-flash": { "input_per_1m": null, "output_per_1m": null },
+    "deepseek-v4-pro": { "input_per_1m": null, "output_per_1m": null },
+    "deepseek-chat": { "input_per_1m": null, "output_per_1m": null },
+    "deepseek-reasoner": { "input_per_1m": null, "output_per_1m": null },
+
+    "llama-3.3-70b": { "input_per_1m": null, "output_per_1m": null },
+    "llama-3.3-70b-versatile": { "input_per_1m": null, "output_per_1m": null },
+    "mistral-large-latest": { "input_per_1m": null, "output_per_1m": null },
+    "mistral-small-latest": { "input_per_1m": null, "output_per_1m": null },
+
+    "_comment_local": "Модель на своей машине денег не стоит — отсюда честные нули.",
+    "llama3.1": { "input_per_1m": 0.0, "output_per_1m": 0.0 },
+    "llama3.2": { "input_per_1m": 0.0, "output_per_1m": 0.0 },
+    "qwen2.5": { "input_per_1m": 0.0, "output_per_1m": 0.0 }
+  }
+}
