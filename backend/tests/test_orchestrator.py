@@ -50,7 +50,7 @@ async def run_debate(council, config=None, repo=None, bus=None, settings=None):
 
 
 # --------------------------------------------------------------------------- #
-# 1. Happy path — all five providers succeed
+# 1. Happy path — every configured provider succeeds
 # --------------------------------------------------------------------------- #
 
 

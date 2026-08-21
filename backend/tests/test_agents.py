@@ -132,7 +132,8 @@ async def test_agents_run_concurrently_not_sequentially():
     started = asyncio.get_running_loop().time()
     await asyncio.gather(*(a.generate_initial_answer("q") for a in council))
     elapsed = asyncio.get_running_loop().time() - started
-    # Sequential execution would take >= 1.25s for five agents.
+    # Sequential execution would take >= 0.25s per agent; the whole roster
+    # in sequence would blow past this bound many times over.
     assert elapsed < 0.9, f"agents appear to run sequentially ({elapsed:.2f}s)"
 
 

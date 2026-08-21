@@ -36,3 +36,6 @@ yarn-error.log*
 Thumbs.db
 *.db-wal
 *.db-shm
+
+# Конфигурация Claude Code — не часть проекта
+.claude/

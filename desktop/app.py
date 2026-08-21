@@ -40,8 +40,8 @@ from .settings_dialog import SettingsDialog
 from .widgets import AgentStrip, CollapsibleSection, MarkdownView, card, section_label
 
 PLACEHOLDER = (
-    "Задайте один вопрос. Пять моделей сначала ответят порознь, "
-    "потом обсудят ответы друг друга."
+    "Задайте один вопрос. Модели сначала ответят порознь, "
+    "потом обсудят ответы друг друга и попробуют прийти к одному."
 )
 
 
